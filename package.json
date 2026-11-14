@@ -1,0 +1,16 @@
+{
+  "name": "knowledge",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "dompurify": "^3.4.0",
+    "marked": "^17.0.0",
+    "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.0"
+  }
+}
