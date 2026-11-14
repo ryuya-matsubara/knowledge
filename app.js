@@ -2,7 +2,6 @@ import DOMPurify from './vendor/purify.es.mjs';
 import { marked } from './vendor/marked.esm.js';
 
 const listView = document.querySelector('#list-view');
-const listTitle = document.querySelector('#list-title');
 const listStatus = document.querySelector('#list-status');
 const articleList = document.querySelector('#articles');
 const articleView = document.querySelector('#article-view');
@@ -49,7 +48,7 @@ async function renderRoute() {
   if (!path) {
     document.title = 'Knowledge';
     if (returningToList) {
-      (links.get(lastArticlePath) ?? listTitle).focus();
+      (links.get(lastArticlePath) ?? articleList).focus();
     }
     return;
   }
