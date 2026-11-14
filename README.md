@@ -2,42 +2,29 @@
 
 覚えておきたい知識をMarkdownで保存し、Webサイトで閲覧・共有するリポジトリです。
 
-## 記事を追加する
+## 記事を追加・更新する
 
-`knowledge/` に1テーマにつき1つの `.md` ファイルを作ります。サブフォルダも使えます。ファイル名は記事URLの一部になるので、公開後は維持するとリンクが切れません。
+`knowledge/` に1テーマにつき1つの `.md` ファイルを置きます。記事の先頭にはタイトルとサブタイトルをYAMLの文字列で書きます。本文は2つ目の `---` の下に書きます。
 
 ```markdown
 ---
-title: "Ethernetとは？"
-subtitle: "LAN内でデータを届ける仕組み"
+title: "記事のタイトル"
+subtitle: "記事のサブタイトル"
 ---
 
-ここに本文を書きます。Markdownの見出し、表、リンク、コードブロックを使えます。
+ここに本文を書きます。見出し、箇条書き、リンク、表、コードブロックを使えます。
 ```
 
-`title` と `subtitle` は必須です。本文は2つ目の `---` の下に書きます。このリポジトリとGitHub Pagesは公開用です。公開してよい内容を追加してください。
+記事と一緒に、ルートの `index.json` を同じコミットで更新します。
 
-## 一覧と公開の仕組み
+- 追加時は `title`、`subtitle`、`path` を持つ項目を追加します。タイトルとサブタイトルはMarkdownの先頭とそろえ、`path` にはルートからの相対パスを書きます。サブフォルダ内の記事も登録できます。
+- 更新時は同じ `path` の項目を編集します。削除時は対応する項目も削除します。公開後にファイル名を変えると、以前の記事URLは使えなくなります。
+- ChatGPTから記事を登録する場合は、プロジェクトの指示でMarkdownと `index.json` の両方を同じコミットに含めるよう指定します。
 
-`main` の `knowledge/` などに変更が入ると、GitHub Actionsがサイトをビルドします。タイトル、サブタイトル、ファイルパスをまとめた `dist/index.json` を毎回生成し、アプリと元のMarkdownファイルをまとめて公開します。索引を手で編集したり、Gitにコミットしたりする必要はありません。
+このリポジトリとGitHub Pagesには公開してよい内容を追加してください。
 
-アプリは一覧を表示する際に `index.json` を読みます。記事を選ぶと、その記事のMarkdownファイルを取得し、ブラウザで本文を整形します。
+## 公開と表示の仕組み
 
-## GitHub Pagesの初回設定
+GitHub Pagesの公開元は **Deploy from a branch → main / (root)** です。Pagesはルートの `index.html`、`app.js`、`style.css` などをそのまま公開します。
 
-1. リポジトリの **Settings → Pages** を開きます。
-2. **Build and deployment → Source** で **GitHub Actions** を選択します。
-3. **Actions → Publish knowledge to GitHub Pages → Run workflow** で、ブランチに `main` を選んで実行します。
-
-デプロイ後のURLは、通常 `https://ryuya-matsubara.github.io/knowledge/` です。
-
-## ローカルで生成する
-
-Node.js 24を使います。
-
-```sh
-npm ci
-npm run build
-```
-
-`npm ci` はロックファイルに記録された依存関係をインストールします。`npm run build` は、サイト、`index.json`、配信用のMarkdownを `dist/` に出力します。
+アプリは `index.json` を読み込んで一覧を表示します。記事を選ぶと `knowledge/` から対象のMarkdownを取得し、ブラウザで整形します。Markdownの変換には `vendor/` のMarkedを使い、DOMPurifyで表示前のHTMLをサニタイズします。

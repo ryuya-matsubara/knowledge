@@ -1,5 +1,5 @@
-import DOMPurify from 'dompurify';
-import { marked } from 'marked';
+import DOMPurify from './vendor/purify.es.mjs';
+import { marked } from './vendor/marked.esm.js';
 
 const listView = document.querySelector('#list-view');
 const listTitle = document.querySelector('#list-title');
