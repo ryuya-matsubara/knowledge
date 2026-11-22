@@ -3,5 +3,10 @@
     "title": "Kiroを動かし続ける方法",
     "subtitle": "承認を減らして自律的に動かすための案2つ",
     "path": "knowledge/kiro-autonomous-mode.md"
+  },
+  {
+    "title": "ゲレンデコンディションの設計と実装",
+    "subtitle": "13スキー場の予報取得、夜間降雪の集計、雪質判定、オフライン表示の仕組み",
+    "path": "knowledge/ski-conditions-design.md"
   }
 ]
