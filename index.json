@@ -1,5 +1,10 @@
 [
   {
+    "title": "生成AIコンテスト",
+    "subtitle": "生成AIコンテストの評価基準",
+    "path": "knowledge/generative-ai-contest.md"
+  },
+  {
     "title": "セキュリティ",
     "subtitle": "守るべき7領域・7層の多層防御・LGWANチェックリスト",
     "path": "knowledge/security.md"
