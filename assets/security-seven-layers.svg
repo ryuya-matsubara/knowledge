@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1070" viewBox="0 0 1024 1070" role="img" aria-labelledby="title desc">
+<title id="title">セキュリティの7層による多層防御</title>
+<desc id="desc">1:物理セキュリティ、2:IDとアクセス、3:境界、4:ネットワーク、5:コンピューティング、6:アプリケーション、7:データの七層</desc>
+<rect width="1024" height="1070" fill="#090909"/>
+<g font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, Yu Gothic, sans-serif">
+<text x="37" y="69" font-size="42" font-weight="700" fill="#ffffff">セキュリティの7層による多層防御</text>
+<text x="38" y="108" font-size="23" fill="#b7b7b7">一つの防御に依存せず、複数の層で保護する</text>
+<rect x="30" y="153" width="105" height="93" rx="20" fill="#9d5bb7"/>
+<text x="82" y="213" font-size="43" font-weight="700" text-anchor="middle" fill="#ffffff">7</text>
+<rect x="155" y="137" width="835" height="125" rx="20" fill="#242424"/>
+<text x="190" y="187" font-size="32" font-weight="700" fill="#ffffff">データ（Data）</text>
+<text x="190" y="233" font-size="25" fill="#bdbdbd">保存情報・機密情報・バックアップ</text>
+<rect x="30" y="282" width="105" height="93" rx="20" fill="#428cd0"/>
+<text x="82" y="342" font-size="43" font-weight="700" text-anchor="middle" fill="#ffffff">6</text>
+<rect x="155" y="266" width="835" height="125" rx="20" fill="#242424"/>
+<text x="190" y="316" font-size="32" font-weight="700" fill="#ffffff">アプリケーション（Application）</text>
+<text x="190" y="362" font-size="25" fill="#bdbdbd">Webアプリ・API・ソースコード</text>
+<rect x="30" y="411" width="105" height="93" rx="20" fill="#1aa6a4"/>
+<text x="82" y="471" font-size="43" font-weight="700" text-anchor="middle" fill="#ffffff">5</text>
+<rect x="155" y="395" width="835" height="125" rx="20" fill="#242424"/>
+<text x="190" y="445" font-size="32" font-weight="700" fill="#ffffff">コンピューティング（Compute）</text>
+<text x="190" y="491" font-size="25" fill="#bdbdbd">OS・サーバー・仮想マシン・コンテナ</text>
+<rect x="30" y="540" width="105" height="93" rx="20" fill="#4ba46d"/>
+<text x="82" y="600" font-size="43" font-weight="700" text-anchor="middle" fill="#ffffff">4</text>
+<rect x="155" y="524" width="835" height="125" rx="20" fill="#242424"/>
+<text x="190" y="574" font-size="32" font-weight="700" fill="#ffffff">ネットワーク（Network）</text>
+<text x="190" y="620" font-size="25" fill="#bdbdbd">通信経路・FW・セグメント・TLS</text>
+<rect x="30" y="669" width="105" height="93" rx="20" fill="#dda72e"/>
+<text x="82" y="729" font-size="43" font-weight="700" text-anchor="middle" fill="#ffffff">3</text>
+<rect x="155" y="653" width="835" height="125" rx="20" fill="#242424"/>
+<text x="190" y="703" font-size="32" font-weight="700" fill="#ffffff">境界（Perimeter）</text>
+<text x="190" y="749" font-size="25" fill="#bdbdbd">外部との接続点・DDoS対策・WAF</text>
+<rect x="30" y="798" width="105" height="93" rx="20" fill="#e8894a"/>
+<text x="82" y="858" font-size="43" font-weight="700" text-anchor="middle" fill="#ffffff">2</text>
+<rect x="155" y="782" width="835" height="125" rx="20" fill="#242424"/>
+<text x="190" y="832" font-size="32" font-weight="700" fill="#ffffff">IDとアクセス（Identity &amp; Access）</text>
+<text x="190" y="878" font-size="25" fill="#bdbdbd">アカウント・認証・認可・MFA</text>
+<rect x="30" y="927" width="105" height="93" rx="20" fill="#b85d6b"/>
+<text x="82" y="987" font-size="43" font-weight="700" text-anchor="middle" fill="#ffffff">1</text>
+<rect x="155" y="911" width="835" height="125" rx="20" fill="#242424"/>
+<text x="190" y="961" font-size="32" font-weight="700" fill="#ffffff">物理セキュリティ（Physical Security）</text>
+<text x="190" y="1007" font-size="25" fill="#bdbdbd">データセンター・設備・物理アクセス</text>
+</g>
+</svg>
