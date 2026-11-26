@@ -5,8 +5,8 @@
     "path": "knowledge/generative-ai-contest.md"
   },
   {
-    "title": "セキュリティ",
-    "subtitle": "守るべき7領域・7層の多層防御・LGWANチェックリスト",
+    "title": "セキュリティ(LGWAN)",
+    "subtitle": "7つの守るべき項目",
     "path": "knowledge/security.md"
   },
   {
